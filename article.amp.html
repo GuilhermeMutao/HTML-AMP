@@ -15,17 +15,53 @@
 -->
 
 <!doctype html>
-<html lang="en">
+<!-- ⚡ is the AMP HTML tag, it's also possible to use the amp attribute in place of the ⚡ attribute-->
+<html ⚡ lang="en"> 
   <head>
-    <link rel="shortcut icon" href="amp_favicon.png">
-
+    <meta charset="utf-8" /> <!-- The charset attribute is required for AMP HTML -->
+    <meta name="viewport" content="width=device-width"> <!-- The viewport tag is required for AMP HTML -->
+    
+    
+    
+    
+    <link rel="canonical" href="/article.html"> <!-- The canonical link is required for AMP HTML --> 
+    <link rel="shortcut icon" href="amp_favicon.png"> <!-- AMP HTML supports the same favicon formats as regular HTML -->
+    
     <title>News Article</title>
+    
+    
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> 
+    <!-- AMP requires the use of the amp-boilerplate tag to ensure that AMP pages render correctly. -->
+    <style amp-custom> 
+          body {
+            width: auto;
+            margin: 0;
+            padding: 0;
+          }
 
-    <link href="base.css" rel="stylesheet" />
+          header {
+            background: Tomato;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+          }
 
-    <script type="text/javascript" src="base.js"></script>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+          h1 {
+            margin: 0;
+            padding: 0.5em;
+            background: white;
+            box-shadow: 0px 3px 5px grey;
+          }
+
+          p {
+            padding: 0.5em;
+            margin: 0.5em;
+          }
+    </style> <!--AMP can't run external stylesheets, so you need to include all the CSS in the head of the document. -->
+    
+    <script async src="https://cdn.ampproject.org/v0.js"></script>  <!-- required for AMP HTML -->
   </head>
+
   <body>
     <header>
       News Site
@@ -34,8 +70,8 @@
       <h1>Article Name</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
-
-      <img src="mountains.jpg">
+      
+      <amp-img src="mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
     </article>
   </body>
 </html>
